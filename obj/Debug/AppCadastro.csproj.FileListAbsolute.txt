@@ -1,0 +1,7 @@
+C:\Users\PRISCILA_FRASER\source\repos\AppCadastro\obj\Debug\AppCadastro.csproj.AssemblyReference.cache
+C:\Users\PRISCILA_FRASER\source\repos\AppCadastro\obj\Debug\AppCadastro.csproj.CoreCompileInputs.cache
+C:\Users\PRISCILA_FRASER\source\repos\AppCadastro\bin\Debug\AppCadastro.exe.config
+C:\Users\PRISCILA_FRASER\source\repos\AppCadastro\bin\Debug\AppCadastro.exe
+C:\Users\PRISCILA_FRASER\source\repos\AppCadastro\bin\Debug\AppCadastro.pdb
+C:\Users\PRISCILA_FRASER\source\repos\AppCadastro\obj\Debug\AppCadastro.exe
+C:\Users\PRISCILA_FRASER\source\repos\AppCadastro\obj\Debug\AppCadastro.pdb
