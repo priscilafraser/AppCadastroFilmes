@@ -25,7 +25,7 @@ namespace AppCadastro.Classes
 
         public void Inserir(Filme elemento)
         {
-            listaFilme.Add[elemento];
+            listaFilme.Add(elemento);
         }
 
         public List<Filme> Lista()

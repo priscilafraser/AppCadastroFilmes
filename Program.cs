@@ -1,4 +1,5 @@
 ﻿using AppCadastro;
+using AppCadastro.Classes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +10,10 @@ namespace AppCadastro
 {
     class Program
     {
+        static FilmeRepositorio repositorio = new FilmeRepositorio();
+
         static void Main(string[] args)
         {
-
-            static FilmeRepositorio repositorio = new FilmeRepositorio();
 
             string opcaoUsuario = GetOpcaoUsuario();
 
@@ -24,16 +25,16 @@ namespace AppCadastro
                         ListarFilmes();
                         break;
                     case "2":
-                        InserirFilme();
+                        //InserirFilme();
                         break;
                     case "3":
-                        AtualizarFilme();
+                        //AtualizarFilme();
                         break;
                     case "4":
-                        ExcluirFilme();
+                        //ExcluirFilme();
                         break;
                     case "5":
-                        VisualizarFilme();
+                        //VisualizarFilme();
                         break;
                     case "C":
                         Console.Clear();
@@ -50,9 +51,9 @@ namespace AppCadastro
         }
 
 
-        private static void ListarSeries()
+        private static void ListarFilmes()
 		{
-			Console.WriteLine("Listar séries");
+			Console.WriteLine("Listar filmes");
 
 			var lista = repositorio.Lista();
 
@@ -66,53 +67,19 @@ namespace AppCadastro
 			{
                 //var excluido = serie.retornaExcluido();
                 
-				Console.WriteLine("#ID {0}: - {1} {2}", serie.retornaId(), serie.retornaTitulo());   //, (excluido ? "*Excluído*" : "")
+				Console.WriteLine("#ID {0}: - {1} {2}", serie.RetornarId(), serie.RetornarTitulo());   //, (excluido ? "*Excluído*" : "")
 			}
 		}
 
 
-        private static void InserirSerie()
-		{
-			Console.WriteLine("Inserir nova série");
-
-			Console.Write("Digite o Título do Filme: ");
-			string entradaTitulo = Console.ReadLine();
-
-			Console.Write("Digite o Ano de de lançamento do filme: ");
-			int entradaAno = int.Parse(Console.ReadLine());
-
-			Console.Write("Digite a Descrição do filme: ");
-			string entradaDescricao = Console.ReadLine();
-
-			Filme novoFilme = new Filme(id: repositorio.ProximoId(),
-										titulo: entradaTitulo,
-										ano: entradaAno,
-										descricao: entradaDescricao);
-
-			repositorio.Insere(novaSerie);
-		}
+                    
 
 
 
 
+        
 
-        private static void ExcluirSerie()
-		{
-			Console.Write("Digite o id da série: ");
-			int indiceSerie = int.Parse(Console.ReadLine());
-
-			repositorio.Exclui(indiceSerie);
-		}
-
-        private static void VisualizarSerie()
-		{
-			Console.Write("Digite o id da série: ");
-			int indiceSerie = int.Parse(Console.ReadLine());
-
-			var serie = repositorio.RetornaPorId(indiceSerie);
-
-			Console.WriteLine(serie);
-		}
+        
 
 
 
