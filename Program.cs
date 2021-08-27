@@ -25,16 +25,16 @@ namespace AppCadastro
                         ListarFilmes();
                         break;
                     case "2":
-                        //InserirFilme();
+                        InserirFilme();
                         break;
                     case "3":
-                        //AtualizarFilme();
+                        AtualizarFilme();
                         break;
                     case "4":
-                        //ExcluirFilme();
+                        ExcluirFilme();
                         break;
                     case "5":
-                        //VisualizarFilme();
+                        VisualizarFilme();
                         break;
                     case "C":
                         Console.Clear();
@@ -51,7 +51,7 @@ namespace AppCadastro
         }
 
 
-        private static void ListarFilmes()
+        public static void ListarFilmes()
 		{
 			Console.WriteLine("Listar filmes");
 
@@ -63,36 +63,80 @@ namespace AppCadastro
 				return;
 			}
 
-			foreach (var serie in lista)
+
+
+			foreach (var filme in lista)
 			{
-                //var excluido = serie.retornaExcluido();
-                
-				Console.WriteLine("#ID {0}: - {1} {2}", serie.RetornarId(), serie.RetornarTitulo());   //, (excluido ? "*Excluído*" : "")
-			}
+                var excluido = filme.retornaExcluido();
+
+                Console.WriteLine($"#ID {filme.RetornarId()}: -  {filme.RetornarTitulo()}, {(excluido ? "(*Excluído*)" : "")}");
+            }
 		}
 
+        public static void InserirFilme()
+        {
+            Console.WriteLine("Inserir novo filme");
 
-                    
+            Console.Write("Digite o Título do Filme: ");
+            string entradaTitulo = Console.ReadLine();
+
+            Console.Write("Digite o Ano de de lançamento do filme: ");
+            int entradaAno = int.Parse(Console.ReadLine());
+
+            Console.Write("Digite a Descrição do filme: ");
+            string entradaDescricao = Console.ReadLine();
+
+            Filme novoFilme = new Filme(id: repositorio.ProximoId(),
+                                        titulo: entradaTitulo,
+                                        ano: entradaAno,
+                                        descricao: entradaDescricao);
+
+            repositorio.Inserir(novoFilme);
+        }
 
 
+        private static void AtualizarFilme()
+        {
+            Console.Write("Digite o id do filme: ");
+            int indiceFilme = int.Parse(Console.ReadLine());
+
+            
+            Console.Write("Digite o Título do filme: ");
+            string entradaTitulo = Console.ReadLine();
+
+            Console.Write("Digite o Ano de lançamento do filme: ");
+            int entradaAno = int.Parse(Console.ReadLine());
+
+            Console.Write("Digite a Descrição do filme: ");
+            string entradaDescricao = Console.ReadLine();
+
+            Filme atualizaSerie = new Filme(id: indiceFilme,
+                                        titulo: entradaTitulo,
+                                        ano: entradaAno,
+                                        descricao: entradaDescricao);
+
+            repositorio.Atualizar(indiceFilme, atualizaSerie);
+        }
 
 
-        
+        private static void ExcluirFilme()
+        {
+            Console.Write("Digite o id do filme: ");
+            int indiceFilme = int.Parse(Console.ReadLine());
 
-        
-
-
-
-
-
-
+            repositorio.Excluir(indiceFilme);
+        }
 
 
+        private static void VisualizarFilme()
+        {
+            Console.Write("Digite o id do filme: ");
+            int indiceFilme = int.Parse(Console.ReadLine());
 
+            var filme = repositorio.RetornarPorId(indiceFilme);
 
-
-
-
+            Console.WriteLine(filme);
+        }
 
 
         public static string GetOpcaoUsuario()

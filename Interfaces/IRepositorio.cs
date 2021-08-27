@@ -10,10 +10,12 @@ namespace AppCadastro.Interfaces
     {
         List<T> Lista();
         T RetornarPorId(int id);
-        void Inserir(T entidade);
+        void Inserir(T elemento);
         void Excluir(int id);
-        void Atualizar(int id, T entidade);
+        void Atualizar(int id, T elemento);
         int ProximoId();
 
     }
 }
+
+

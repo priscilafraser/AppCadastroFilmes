@@ -9,6 +9,6 @@ namespace AppCadastro
     public abstract class UnicaClasse
     {
         
-        public int Id { get; set; }
+        public int Id { get; protected set; }
     }
 }

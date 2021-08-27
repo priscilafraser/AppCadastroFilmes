@@ -33,6 +33,7 @@ namespace AppCadastro
             retorno += $"Título: {this.Titulo} {Environment.NewLine}";
             retorno += $"Descrição: {this.Descricao} {Environment.NewLine}";
             retorno += $"Ano de lançamento: {this.Ano} {Environment.NewLine}";
+            retorno += "Excluido: " + this.Excluido;
 
             return retorno;
 
@@ -48,12 +49,18 @@ namespace AppCadastro
             return Convert.ToString(Id);
         }
 
+        public bool retornaExcluido()
+        {
+            return this.Excluido;
+        }
+
+
         public void Excluir()
         {
             this.Excluido = true;
         }
 
-
+        
     }
 
 
