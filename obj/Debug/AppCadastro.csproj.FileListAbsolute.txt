@@ -5,3 +5,10 @@ C:\Users\PRISCILA_FRASER\source\repos\AppCadastro\bin\Debug\AppCadastro.exe
 C:\Users\PRISCILA_FRASER\source\repos\AppCadastro\bin\Debug\AppCadastro.pdb
 C:\Users\PRISCILA_FRASER\source\repos\AppCadastro\obj\Debug\AppCadastro.exe
 C:\Users\PRISCILA_FRASER\source\repos\AppCadastro\obj\Debug\AppCadastro.pdb
+C:\Users\PRISCILA_FRASER\Documents\DIO\BootcampAvanade CodeAnywhere .NET\Criando um APP simples de cadastro de séries em .NET\bin\Debug\AppCadastro.exe.config
+C:\Users\PRISCILA_FRASER\Documents\DIO\BootcampAvanade CodeAnywhere .NET\Criando um APP simples de cadastro de séries em .NET\bin\Debug\AppCadastro.exe
+C:\Users\PRISCILA_FRASER\Documents\DIO\BootcampAvanade CodeAnywhere .NET\Criando um APP simples de cadastro de séries em .NET\bin\Debug\AppCadastro.pdb
+C:\Users\PRISCILA_FRASER\Documents\DIO\BootcampAvanade CodeAnywhere .NET\Criando um APP simples de cadastro de séries em .NET\obj\Debug\AppCadastro.csproj.AssemblyReference.cache
+C:\Users\PRISCILA_FRASER\Documents\DIO\BootcampAvanade CodeAnywhere .NET\Criando um APP simples de cadastro de séries em .NET\obj\Debug\AppCadastro.csproj.CoreCompileInputs.cache
+C:\Users\PRISCILA_FRASER\Documents\DIO\BootcampAvanade CodeAnywhere .NET\Criando um APP simples de cadastro de séries em .NET\obj\Debug\AppCadastro.exe
+C:\Users\PRISCILA_FRASER\Documents\DIO\BootcampAvanade CodeAnywhere .NET\Criando um APP simples de cadastro de séries em .NET\obj\Debug\AppCadastro.pdb

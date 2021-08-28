@@ -46,7 +46,7 @@ namespace AppCadastro
                 opcaoUsuario = GetOpcaoUsuario();
             }
 
-            Console.WriteLine("Obrigado por utilizar nossos serviços.");
+            Console.WriteLine("Obrigado pela parceria e estamos juntos neste Multiverso!!");
             Console.ReadLine();
         }
 
@@ -59,7 +59,7 @@ namespace AppCadastro
 
 			if (lista.Count == 0)
 			{
-				Console.WriteLine("Nenhuma série cadastrada.");
+				Console.WriteLine("Nenhum filme cadastrado.");
 				return;
 			}
 
@@ -69,7 +69,7 @@ namespace AppCadastro
 			{
                 var excluido = filme.retornaExcluido();
 
-                Console.WriteLine($"#ID {filme.RetornarId()}: -  {filme.RetornarTitulo()}, {(excluido ? "(*Excluído*)" : "")}");
+                Console.WriteLine($"#ID {filme.RetornarId()}: -  {filme.RetornarTitulo()}  {(excluido ? "(*Excluído*)" : "")}");
             }
 		}
 
@@ -83,12 +83,20 @@ namespace AppCadastro
             Console.Write("Digite o Ano de de lançamento do filme: ");
             int entradaAno = int.Parse(Console.ReadLine());
 
-            Console.Write("Digite a Descrição do filme: ");
+            Console.Write("Digite os Atores principais: ");
+            string entradaAtores = Console.ReadLine();
+
+            Console.Write("Digite o Diretor do filme: ");
+            string  entradaDiretor = Console.ReadLine();
+
+            Console.Write("Digite umaa Descrição do filme: ");
             string entradaDescricao = Console.ReadLine();
 
             Filme novoFilme = new Filme(id: repositorio.ProximoId(),
                                         titulo: entradaTitulo,
                                         ano: entradaAno,
+                                        atoresPrincipais: entradaAtores,
+                                        diretor: entradaDiretor,
                                         descricao: entradaDescricao);
 
             repositorio.Inserir(novoFilme);
@@ -107,12 +115,20 @@ namespace AppCadastro
             Console.Write("Digite o Ano de lançamento do filme: ");
             int entradaAno = int.Parse(Console.ReadLine());
 
+            Console.Write("Digite os Atores principais: ");
+            string entradaAtores = Console.ReadLine();
+
+            Console.Write("Digite o Diretor do filme: ");
+            string entradaDiretor = Console.ReadLine();
+
             Console.Write("Digite a Descrição do filme: ");
             string entradaDescricao = Console.ReadLine();
 
             Filme atualizaSerie = new Filme(id: indiceFilme,
                                         titulo: entradaTitulo,
                                         ano: entradaAno,
+                                        atoresPrincipais: entradaAtores,
+                                        diretor: entradaDiretor,
                                         descricao: entradaDescricao);
 
             repositorio.Atualizar(indiceFilme, atualizaSerie);

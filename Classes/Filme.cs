@@ -14,14 +14,20 @@ namespace AppCadastro
 
         public int Ano { get; set; }
 
+        public string AtoresPrincipais { get; set; }
+
+        public string Diretor { get; set; }
+
         public bool Excluido { get; set; }
 
 
-        public Filme(int id, string titulo, string descricao, int ano)
+        public Filme(int id, string titulo, string descricao, string atoresPrincipais, string diretor, int ano)
         {
             this.Id = id;
             this.Titulo = titulo;
             this.Descricao = descricao;
+            this.AtoresPrincipais = atoresPrincipais;
+            this.Diretor = diretor;
             this.Ano = ano;
             this.Excluido = false;
         }
@@ -33,6 +39,8 @@ namespace AppCadastro
             retorno += $"Título: {this.Titulo} {Environment.NewLine}";
             retorno += $"Descrição: {this.Descricao} {Environment.NewLine}";
             retorno += $"Ano de lançamento: {this.Ano} {Environment.NewLine}";
+            retorno += $"Atores principais: {this.AtoresPrincipais} {Environment.NewLine}";
+            retorno += $"Diretor: {this.Diretor} {Environment.NewLine}";
             retorno += "Excluido: " + this.Excluido;
 
             return retorno;
